@@ -1,0 +1,50 @@
+.appBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 70px;
+  border-bottom: 2px solid var(--white-smoked);
+}
+
+.appBar__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appBar__navItem {
+  color: var(--white-smoked);
+  text-decoration: none;
+  font-family: var(--title-font);
+  font-size: var(--title-font-size);
+  font-style: normal;
+  font-weight: var(--title-font-weight);
+  line-height: normal;
+  padding: 0 40px;
+}
+
+.appBar__navItem.active,
+.appBar__navItem:hover {
+  color: var(--orange-highlight);
+}
+
+.sidebar {
+  display: none;
+}
+
+.mobileAppBar__nav {
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+  .appBar {
+    padding: 10px 13px;
+  }
+  .appBar__nav {
+    display: none;
+  }
+  .sidebar {
+    display: block;
+  }
+}
