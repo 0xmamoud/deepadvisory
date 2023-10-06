@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo_header.svg";
 import menu from "../../assets/nav.svg";
 import cross from "../../assets/exit_menu.svg";
-import MobilHeader from "../MobileHeader/MobilHeader";
+// import MobilHeader from "../MobileHeader/MobilHeader";
 
 const Header = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -14,11 +14,19 @@ const Header = () => {
   };
 
   const handleSidebar = () => setSidebar(!sidebar);
+  const closeNav = () => sidebar && setSidebar(false);
 
   return (
     <header className="appBar">
-      <img src={logo} alt="Deep Advisory logo" className="appBar__icon" />
-      <nav className="appBar__nav">
+      <img
+        src={logo}
+        alt="Deep Advisory logo"
+        className={`appBar__icon ${sidebar && "responsive"}`}
+      />
+      <nav
+        className={`appBar__nav ${sidebar && "responsive"}`}
+        onClick={closeNav}
+      >
         <Link to="/" className={`appBar__navItem ${isActive("/")}`}>
           Accueil
         </Link>
@@ -31,6 +39,12 @@ const Header = () => {
         <Link to="/blog" className={`appBar__navItem ${isActive("/blog")}`}>
           Blog
         </Link>
+        <Link
+          to="/contact"
+          className={`appBar__navItem ${isActive("/contact")} contact`}
+        >
+          Contactez-nous
+        </Link>
       </nav>
       <Link to="/contact" className="cta">
         Contactez-nous
@@ -38,10 +52,9 @@ const Header = () => {
       <img
         src={sidebar ? cross : menu}
         alt="menu hamburger"
-        className="sidebar"
+        className={`sidebar ${sidebar && "responsive"}`}
         onClick={handleSidebar}
       />
-      {sidebar && <MobilHeader />}
     </header>
   );
 };

@@ -3,16 +3,17 @@
 /* modules */
 @import "./Modules/header.css";
 @import "./Modules/cta.css";
+@import "./Modules/footer.css";
 
 /* Design system */
 :root {
   /* colors */
-  --orange-highlight: #F54329;
-  --dark-blue: #222C41;
+  --orange-highlight: #f54329;
+  --dark-blue: #222c41;
   --gray: #838893;
   --white: #ffffff;
-	--white-smoked: #FAF9F7;
-	--mocha : #FDEEDA;
+  --white-smoked: #faf9f7;
+  --mocha: #fdeeda;
 
   /* Text configuration */
   --header-font: "Bebas Neue";
@@ -36,7 +37,7 @@
   --body-line-height: 24px;
 }
 
-@media (max-width: 768) {
+@media (max-width: 768px) {
   :root {
     /* mobile responsive variables*/
     --header-font-size: 40px;
