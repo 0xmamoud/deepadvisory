@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap");
 
+/* pages */
+@import "./Pages/home.css";
+@import "./Pages/services.css";
+@import "./Pages/contact.css";
+@import "./Pages/blog.css";
+
 /* modules */
 @import "./Modules/header.css";
 @import "./Modules/cta.css";
