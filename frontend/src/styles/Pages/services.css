@@ -32,6 +32,7 @@
 }
 
 .cardCta {
+  color: var(--mocha);
   text-decoration: none;
   font-family: var(--title-font);
   font-size: var(--title-font-size);
@@ -43,6 +44,11 @@
   padding: 10px 30px;
   border: 2px solid var(--mocha);
   border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+.cardCta:active,
+.cardCta:hover {
+  transform: scale(1.15);
 }
 
 @media (max-width: 1024px) {
@@ -53,23 +59,33 @@
 
 @media (max-width: 768px) {
   .cardSection {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0;
   }
 
   .card {
     height: fit-content;
-    width: 95%;
+    width: 80%;
     padding: 10px;
     margin: 0;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
-  .card.expanded {
-    max-height: 800px;
+  .responsive {
     display: flex;
     flex-direction: column;
-    padding: 15px 5px;
+    padding-top: 20px;
+    transition: all 0.5s ease;
+    padding-bottom: 20px;
+  }
+
+  .responsive > .cardArrow {
+    height: 30px;
+    margin-top: 10px;
   }
 }

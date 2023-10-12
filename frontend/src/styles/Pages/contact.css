@@ -1,0 +1,120 @@
+.getCta__title {
+  text-align: center;
+}
+
+.getCta__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+.getCta__form {
+  border-radius: 50px;
+  border: 3px solid var(--mocha);
+  box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.25);
+  padding: 20px 10px;
+  min-height: 600px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.getCta__formTitle {
+  text-align: center;
+}
+
+.getCta__formContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.getCta__formInput {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--smoked-white);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--mocha);
+}
+
+.form__btn {
+  background: none;
+  color: var(--mocha);
+  text-decoration: none;
+  font-family: var(--title-font);
+  font-size: var(--title-font-size);
+  font-style: normal;
+  font-weight: var(--title-font-weight);
+  line-height: normal;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  padding: 10px 50px;
+  border: 2px solid var(--mocha);
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+.form__btn:active,
+.form__btn:hover {
+  transform: scale(1.15);
+}
+
+.getCta__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.linkImg {
+  width: 60px;
+  height: 60px;
+}
+
+.socialMedia {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.ctaSocial {
+  filter: invert(97%) sepia(7%) saturate(1495%) hue-rotate(310deg)
+    brightness(103%) contrast(98%);
+}
+
+@media (max-width: 768px) {
+  .getCta__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .getCta__form {
+    width: 90%;
+  }
+
+  .ctaSocial {
+    display: none;
+  }
+
+  .getCta__link {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: -40px;
+  }
+}

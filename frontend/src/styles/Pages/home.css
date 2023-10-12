@@ -39,6 +39,12 @@
   padding: 15px 44px;
   border: 2px solid var(--mocha);
   border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+.hero__services:hover,
+.hero__services:active {
+  transform: scale(1.15);
 }
 
 .aboutUs {

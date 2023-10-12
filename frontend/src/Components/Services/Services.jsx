@@ -2,16 +2,25 @@ import { cardContent } from ".";
 import arrowRight from "../../assets/right_arrow.svg";
 import arrowDawn from "../../assets/arrowDawn.svg";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [fill, setFill] = useState(false);
+  const [fill, setFill] = useState([]);
 
   useEffect(() => {
     window.onresize = () => {
       setWindowWidth(window.innerWidth);
     };
   }, [windowWidth]);
+
+  const toggleCard = (cardId) => {
+    if (fill.includes(cardId)) {
+      setFill(fill.filter((id) => id !== cardId));
+    } else {
+      setFill([cardId]);
+    }
+  };
 
   const cards = cardContent.map((card) => {
     return windowWidth > 775 ? (
@@ -23,21 +32,28 @@ const Services = () => {
         />
         <h2 className="cardTitle">{card.title}</h2>
         <p className="cardText">{card.text}</p>
-        <p className="cardCta">En savoir plus</p>
+        <Link to="/contact" className="cardCta">
+          En savoir plus
+        </Link>
       </div>
     ) : (
-      <div className="card responsive" key={card.id}>
+      <div
+        className={`card ${fill.includes(card.id) && "responsive"}`}
+        key={card.id}
+        onClick={() => toggleCard(card.id)}
+      >
         <h2 className="cardTitle">{card.title}</h2>
         <img
-          src={fill ? arrowDawn : arrowRight}
+          src={fill.includes(card.id) ? arrowDawn : arrowRight}
           alt="image flèche directionnelle"
-          onClick={() => setFill(!fill)}
           className="cardArrow"
         />
-        {fill && (
+        {fill.includes(card.id) && (
           <>
             <p className="cardText">{card.text}</p>
-            <p className="cardCta">En savoir plus</p>
+            <Link to="/contact" className="cardCta">
+              En savoir plus
+            </Link>
           </>
         )}
       </div>

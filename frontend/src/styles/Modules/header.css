@@ -39,6 +39,7 @@
 @media (max-width: 768px) {
   .appBar {
     padding: 10px 13px;
+    margin-bottom: 40px;
   }
 
   .appBar__nav {

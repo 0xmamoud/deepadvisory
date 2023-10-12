@@ -6,6 +6,7 @@ import Contact from "./Components/Contact/Contact";
 import Blog from "./Components/Blog/Blog";
 import Error from "./Components/Error/Error";
 import Footer from "./Components/Footer/Footer";
+import Modal from "./Components/Modal/Modal";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/connexion" element={<Modal />} />
         <Route path="/*" element={<Error />} />
       </Routes>
       <Footer />

@@ -10,6 +10,7 @@
 @import "./Modules/header.css";
 @import "./Modules/cta.css";
 @import "./Modules/footer.css";
+@import "./Modules/modal.css";
 
 /* Design system */
 :root {
