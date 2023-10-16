@@ -44,6 +44,21 @@
   --body-line-height: 24px;
 }
 
+@media (max-width: 960px) {
+  :root {
+    /* mobile responsive variables*/
+    --header-font-size: 40px;
+    --title-font-size: 20px;
+    --body-highlight-font-size: 16px;
+    --body-font-size: 16px;
+
+    --header-line-height: 48px;
+    --title-line-height: 24px;
+    --body-highlight-line-height: 20px;
+    --body-line-height: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   :root {
     /* mobile responsive variables*/

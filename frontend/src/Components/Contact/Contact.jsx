@@ -10,11 +10,12 @@ const Contact = () => {
     e.preventDefault();
     const form = e.target;
     const element = form.elements;
+    const subject = element.subject.value;
     const name = element.name.value;
     const email = element.email.value;
     const number = element.number.value;
     const message = element.message.value;
-    console.log(name, email, number, message);
+    console.log(subject, name, email, number, message);
     form.reset();
   };
   return (
@@ -23,6 +24,12 @@ const Contact = () => {
       <div className="getCta__content">
         <form action="POST" className="getCta__form" onSubmit={handleSubmit}>
           <h2 className="getCta__formTitle">laissez-nous vos coordonnées</h2>
+          <div className="getCta__formContent">
+            <label htmlFor="subject" className="getCta__formLabel">
+              Sujet
+            </label>
+            <input type="text" className="getCta__formInput" id="subject" />
+          </div>
           <div className="getCta__formContent">
             <label htmlFor="name" className="getCta__formLabel">
               Nom

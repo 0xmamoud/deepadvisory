@@ -4,6 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const userRoutes = require("./routes/user");
 const blogRoutes = require("./routes/blog");
+const ctaRoute = require("./routes/contact");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/auth", userRoutes);
 app.use("/api/blog", blogRoutes);
+app.use("/api/contact", ctaRoute);
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
