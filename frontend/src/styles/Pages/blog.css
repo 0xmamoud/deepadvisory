@@ -8,6 +8,7 @@
   position: absolute;
   right: 10px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .blog__last {

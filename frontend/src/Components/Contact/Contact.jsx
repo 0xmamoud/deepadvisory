@@ -4,19 +4,32 @@ import phone from "../../assets/number.svg";
 import x from "../../assets/x_logo 1.svg";
 import linkedin from "../../assets/linkedin.svg";
 import facebook from "../../assets/facebook.svg";
+import axios from "axios";
 
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const form = e.target;
     const element = form.elements;
-    const subject = element.subject.value;
-    const name = element.name.value;
-    const email = element.email.value;
-    const number = element.number.value;
-    const message = element.message.value;
-    console.log(subject, name, email, number, message);
-    form.reset();
+
+    const data = {
+      subject: element.subject.value,
+      name: element.name.value,
+      email: element.email.value,
+      number: element.number.value,
+      message: element.message.value,
+    };
+
+    axios
+      .post("http://localhost:3000/api/contact", data)
+      .then((response) => {
+        console.log(response);
+        form.reset();
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
   return (
     <section className="getCta">

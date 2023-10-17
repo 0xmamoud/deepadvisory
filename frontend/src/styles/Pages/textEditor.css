@@ -1,0 +1,62 @@
+.editorForm {
+  background: var(--white-smoked);
+  margin-top: 40px;
+}
+
+.editorForm__conent {
+  background: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.editorForm__btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: solid 2px var(--mocha);
+  background: var(--dark-blue);
+  color: var(--smoked-white);
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+.editorForm__btn:active {
+  transform: scale(1.15);
+}
+
+.editorForm__conent > input {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--smoked-white);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--mocha);
+}
+
+.editorForm__conent > label {
+  margin: 10px 0;
+}
+
+.ql-editor {
+  color: var(--dark-blue);
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.ql-editor > h1,
+.ql-editor > h2,
+.ql-editor > h3 {
+  color: var(--dark-blue);
+}

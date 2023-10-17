@@ -5,6 +5,7 @@
 @import "./Pages/services.css";
 @import "./Pages/contact.css";
 @import "./Pages/blog.css";
+@import "./Pages/textEditor.css";
 
 /* modules */
 @import "./Modules/header.css";

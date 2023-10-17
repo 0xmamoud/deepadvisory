@@ -31,6 +31,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border: 2px solid var(--mocha);
+  border-radius: 40px;
 }
 
 .modal__form > input {

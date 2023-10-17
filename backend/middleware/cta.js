@@ -14,7 +14,7 @@ module.exports = (req, res, next) => {
     <h2>nom: ${req.body.name}
     <br/>tel: ${req.body.number}
     <br/>email: ${req.body.email}</h2>
-    <p>${req.body.name}</p>
+    <p>${req.body.message}</p>
     </div>`,
   };
   sgMail

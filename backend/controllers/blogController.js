@@ -13,7 +13,7 @@ const getAllArticle = (req, res) => {
 const createArticle = (req, res) => {
   const blogObject = req.body;
   const blog = new Blog({
-    userId: req.ath.userId,
+    userId: req.auth.userId,
     ...blogObject,
   });
 
@@ -42,7 +42,7 @@ const modifyArticle = (req, res) => {
   const blogObject = req.body;
   Blog.findOne({ _id: req.params.id })
     .then((article) => {
-      if (article.userId != req.ath.userId) {
+      if (article.userId != req.auth.userId) {
         res.status(401).json({ message: "Not authorized" });
       } else {
         Blog.updateOne(
@@ -61,7 +61,7 @@ const modifyArticle = (req, res) => {
 const deleteArticle = (req, res) => {
   Blog.findOne({ _id: req.params.id })
     .then((article) => {
-      if (article.userId != req.ath.userId) {
+      if (article.userId != req.auth.userId) {
         res.status(401).json({ message: "Not authorized" });
       } else {
         Blog.deleteOne({ _id: req.params.id })

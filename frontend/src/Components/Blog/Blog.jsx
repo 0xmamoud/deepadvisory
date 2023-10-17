@@ -1,13 +1,35 @@
 import logo from "../../assets/logo_void.svg";
 import Modal from "../Modal/Modal";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Blog = () => {
   const [modal, setModal] = useState(false);
+  const [blogList, setBlogList] = useState([]);
+  const navigate = useNavigate();
+
+  const localData = localStorage.getItem("userDeepAdvisory");
+
+  const handleConect = () => {
+    if (localData) {
+      const data = JSON.parse(localData);
+      const expirationTime = 24 * 60 * 60 * 1000;
+      const currentTime = new Date().getTime();
+
+      if (currentTime - data.expire < expirationTime) {
+        navigate(`/texteditor/user/${data.userId}`);
+      } else {
+        localStorage.removeItem("userDeepAdvisory");
+        setModal(true);
+      }
+    } else {
+      setModal(true);
+    }
+  };
 
   return (
     <section className="blog">
-      <p className="log" onClick={() => setModal(true)}>
+      <p className="log" onClick={handleConect}>
         connexion
       </p>
       {modal && <Modal setmodal={setModal} />}
