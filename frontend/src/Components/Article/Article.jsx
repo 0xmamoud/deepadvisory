@@ -51,7 +51,7 @@ const Article = () => {
   const removeBlog = () => {
     const userInfos = JSON.parse(localData);
     axios
-      .delete(`http://localhost:3000/api/blog/${id}`, {
+      .delete(`https://deepadvisory.onrender.com/api/blog/${id}`, {
         headers: { Authorization: `Bearer ${userInfos.token}` },
       })
       .then((response) => {
