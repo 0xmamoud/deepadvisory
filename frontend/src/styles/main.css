@@ -6,6 +6,7 @@
 @import "./Pages/contact.css";
 @import "./Pages/blog.css";
 @import "./Pages/textEditor.css";
+@import "./Pages/article.css";
 
 /* modules */
 @import "./Modules/header.css";

@@ -1,3 +1,9 @@
+.blog__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .blog {
   display: flex;
   flex-direction: column;
@@ -22,6 +28,12 @@
   border-radius: 50px;
   border: 3px solid var(--mocha);
   box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.blog__card:hover {
+  transform: scale(1.15);
 }
 
 .blog__line {

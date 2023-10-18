@@ -8,6 +8,7 @@ import Error from "./Components/Error/Error";
 import Footer from "./Components/Footer/Footer";
 import Modal from "./Components/Modal/Modal";
 import TextEditor from "./Components/TextEditor/TextEditor";
+import Article from "./Components/Article/Article";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/connexion" element={<Modal />} />
         <Route path="/texteditor/user/:id" element={<TextEditor />} />
+        <Route path="/article/:id" element={<Article />} />
         <Route path="/*" element={<Error />} />
       </Routes>
       <Footer />

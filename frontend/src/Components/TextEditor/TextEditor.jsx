@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 const TextEditor = () => {
   const [value, setValue] = useState("");
+  const { id } = useParams();
   const navigate = useNavigate();
 
   const localData = localStorage.getItem("userDeepAdvisory");
@@ -44,18 +45,33 @@ const TextEditor = () => {
       userId: userInfos.userId,
     };
 
-    axios
-      .post("http://localhost:3000/api/blog", data, {
-        headers: { Authorization: `Bearer ${userInfos.token}` },
-      })
-      .then((response) => {
-        console.log(response);
-        form.reset();
-        navigate("/blog");
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    if (id === userInfos.userId) {
+      axios
+        .post("http://localhost:3000/api/blog", data, {
+          headers: { Authorization: `Bearer ${userInfos.token}` },
+        })
+        .then((response) => {
+          console.log(response);
+          form.reset();
+          navigate("/blog");
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    } else {
+      axios
+        .put(`http://localhost:3000/api/blog/${id}`, data, {
+          headers: { Authorization: `Bearer ${userInfos.token}` },
+        })
+        .then((response) => {
+          console.log(response);
+          form.reset();
+          navigate("/blog");
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
   };
 
   return (

@@ -1,0 +1,25 @@
+.blog {
+  min-width: 50%;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 72px;
+}
+
+.modifieArticle {
+  display: block;
+  border: 2px solid var(--mocha);
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.modifieArticle:hover {
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .blog {
+    margin-top: 40px;
+  }
+}

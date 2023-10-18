@@ -3,9 +3,9 @@ const router = express.Router();
 const auth = require("../middleware/auth");
 const blogCtrl = require("../controllers/blogController");
 
-router.get("/", auth, blogCtrl.getAllArticle);
+router.get("/", blogCtrl.getAllArticle);
 router.post("/", auth, blogCtrl.createArticle);
-router.get("/:id", auth, blogCtrl.getOneArticle);
+router.get("/:id", blogCtrl.getOneArticle);
 router.put("/:id", auth, blogCtrl.modifyArticle);
 router.delete("/:id", auth, blogCtrl.deleteArticle);
 
