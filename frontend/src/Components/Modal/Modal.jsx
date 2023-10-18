@@ -16,7 +16,7 @@ const Modal = ({ setmodal }) => {
     };
 
     axios
-      .post("http://localhost:3000/api/auth/login", data)
+      .post("https://deepadvisory.onrender.com/api/auth/login", data)
       .then((response) => {
         const localContent = {
           userId: response.data.userId,

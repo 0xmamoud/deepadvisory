@@ -18,7 +18,7 @@ const Article = () => {
     const getData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/blog/${id}`
+          `https://deepadvisory.onrender.com/api/blog/${id}`
         );
         console.log(response.data);
         setBlog(response.data);
@@ -29,6 +29,7 @@ const Article = () => {
     };
     getData();
     adminControl();
+    // eslint-disable-next-line
   }, [loading, id, admin]);
 
   const localData = localStorage.getItem("userDeepAdvisory");

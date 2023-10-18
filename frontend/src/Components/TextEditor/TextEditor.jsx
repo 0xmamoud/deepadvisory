@@ -47,7 +47,7 @@ const TextEditor = () => {
 
     if (id === userInfos.userId) {
       axios
-        .post("http://localhost:3000/api/blog", data, {
+        .post("https://deepadvisory.onrender.com/api/blog", data, {
           headers: { Authorization: `Bearer ${userInfos.token}` },
         })
         .then((response) => {
@@ -60,7 +60,7 @@ const TextEditor = () => {
         });
     } else {
       axios
-        .put(`http://localhost:3000/api/blog/${id}`, data, {
+        .put(`https://deepadvisory.onrender.com/api/blog/${id}`, data, {
           headers: { Authorization: `Bearer ${userInfos.token}` },
         })
         .then((response) => {

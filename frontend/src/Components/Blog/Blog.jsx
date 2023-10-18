@@ -13,7 +13,9 @@ const Blog = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/blog");
+        const response = await axios.get(
+          "https://deepadvisory.onrender.com/api/blog"
+        );
         console.log(response.data);
         setBlogList(response.data);
         setLoading(true);

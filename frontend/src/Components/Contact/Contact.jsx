@@ -22,7 +22,7 @@ const Contact = () => {
     };
 
     axios
-      .post("http://localhost:3000/api/contact", data)
+      .post("https://deepadvisory.onrender.com/api/contact", data)
       .then((response) => {
         console.log(response);
         form.reset();
