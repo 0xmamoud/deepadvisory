@@ -45,11 +45,7 @@ const Footer = () => {
           <img src={facebook} alt="facebook logo" className="logoMedia" />
         </a>
       </div>
-      <p className="copyright">
-        Designed and built by Mahamadou Kane
-        <br />
-        ©Copyright 2023 - Mahamadou Kane
-      </p>
+      <p className="copyright">©Copyright 2023</p>
     </footer>
   );
 };
