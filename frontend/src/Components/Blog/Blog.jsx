@@ -6,7 +6,7 @@ import axios from "axios";
 
 const Blog = () => {
   const [modal, setModal] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [blogList, setBlogList] = useState([]);
   const navigate = useNavigate();
 
@@ -18,13 +18,13 @@ const Blog = () => {
         );
         console.log(response.data);
         setBlogList(response.data);
-        setLoading(true);
+        setLoading(false);
       } catch (error) {
         console.log(error);
       }
     };
     getData();
-  }, [loading]);
+  }, []);
 
   const localData = localStorage.getItem("userDeepAdvisory");
 
@@ -46,7 +46,7 @@ const Blog = () => {
   };
 
   const displayBlog = () => {
-    if (!loading) {
+    if (loading) {
       return <p className="blog__loading">Chargement...</p>;
     } else {
       if (blogList.length === 0) {
