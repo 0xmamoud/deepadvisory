@@ -10,8 +10,8 @@
 }
 
 .modal__img {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
 
 .overlay {
@@ -26,8 +26,7 @@
   line-height: 1.4;
   padding: 14px 28px;
   border-radius: 3px;
-  max-width: 600px;
-  min-width: 300px;
+  max-width: 70vw;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -61,7 +60,7 @@
   margin-top: 10px;
   display: block;
   text-align: center;
-  padding: 10px 50px;
+  padding: 10px 30px;
   border: 2px solid var(--mocha);
   border-radius: 30px;
   transition: transform 0.3s ease;
