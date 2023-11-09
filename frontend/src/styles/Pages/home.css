@@ -51,6 +51,7 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 72px;
+  max-width: 1440px;
 }
 
 .about__title {
