@@ -4,12 +4,13 @@ export const navLinks = [
     href: "#accueil",
   },
   {
-    label: "Services",
-    href: "#services",
-  },
-  {
     label: "À propos",
     href: "#about",
+  },
+
+  {
+    label: "Services",
+    href: "#services",
   },
 ]
 
