@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Hero } from '@/components/hero'
+import { Footer } from './components/footer'
+import { Header } from "@/components/header"
+import { About } from '@/components/about'
+import { Services } from '@/components/services'
+import { Cta } from '@/components/cta'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <main className="min-h-screen bg-dark-blue font-baskterville relative ">
+
+      <section className="fixed top-0 z-50 w-full border-b 
+        border-separator bg-dark-blue/80 backdrop-blur-md"
+      >
+        <Header />
+      </section>
+      <section className='max-container'>
+        <Hero />
+      </section>
+      <section className="border-t border-separator bg-dark-blue py-16 sm:py-24" >
+        <About />
+      </section>
+      <section className="relative border-t border-separator  
+        bg-dark-blue py-16 sm:py-24"
+      >
+        <Services />
+      </section>
+      <Cta />
+      <section className="border-t border-separator bg-dark-blue">
+        <Footer />
+      </section>
+    </main>
   )
 }
 
