@@ -6,7 +6,8 @@ export function Hero() {
   return (
     <section
       className="relative flex min-h-screen items-center justify-center
-     pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden" id="accueil"
+       pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden "
+      id="accueil"
     >
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0
@@ -30,8 +31,8 @@ export function Hero() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
-            className="text-sage-green text-3xl sm:text-4xl
-            md:text-5xl lg:text-6xl font-bold tracking-tighter"
+            className=" text-sage-green text-3xl sm:text-4xl
+            md:text-5xl lg:text-6xl tracking-tighter font-baskerville "
           >
             DeepAdvisory
             <br />

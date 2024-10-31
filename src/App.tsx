@@ -8,7 +8,7 @@ import { Cta } from '@/components/cta'
 function App() {
 
   return (
-    <main className="min-h-screen bg-dark-blue font-baskterville relative ">
+    <main className="min-h-screen bg-dark-blue font-poppins relative ">
 
       <section className="fixed top-0 z-50 w-full border-b 
         border-separator bg-dark-blue/80 backdrop-blur-md"

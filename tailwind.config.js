@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        baskterville: ["Baskerville", "serif"],
+        baskerville: ["Baskerville", "serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       borderRadius: {
         lg: 'var(--radius)',
