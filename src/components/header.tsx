@@ -59,9 +59,12 @@ export function Header() {
               ))}
 
               <Button
-                className="mt-4 bg-mid-night-blue text-white active:bg-mid-night-blue/90"
+                className="mt-4 bg-mid-night-blue text-white 
+                active:bg-mid-night-blue/90 active:bg-mid-night-blue/90"
               >
-                Nous contacter
+                <a href="#contact"
+                  onClick={() => setIsOpen(false)}
+                >Nous contacter</a>
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </nav>
